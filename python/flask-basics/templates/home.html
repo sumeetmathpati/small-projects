@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %} 
+<h1>Hello {{ name }}! you are on the home page</h1>
+
+{% if display %}
+<h1>DISPLAY</h1>
+{% endif %}
+
+{% for x in lst %}
+<p>{{ x }}</p>
+{% endfor %}
+
+<h1>DB RESULTS</h1>
+
+{% for item in results %}
+	<h2>ID: {{ item.ID }}, name: {{ item.name }}, location: {{ item.location }}</h2>
+{% endfor %}
+
+{% endblock %}
